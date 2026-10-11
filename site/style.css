@@ -1,0 +1,101 @@
+:root {
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --text: #14181f;
+  --muted: #5b6472;
+  --line: #e2e5ea;
+  --accent: #0b2559;
+  --accent-text: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --text: #e6e9ee;
+    --muted: #9aa4b2;
+    --line: #2a313c;
+    --accent: #7aa2ff;
+    --accent-text: #0d1117;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 56px 16px 40px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+h1 { margin: 4px 0 0; font-size: 40px; line-height: 1.15; }
+
+.role { margin: 4px 0 16px; color: var(--muted); font-weight: 500; }
+
+.lead { max-width: 640px; margin: 0 0 16px; }
+
+.links { display: flex; flex-wrap: wrap; gap: 16px; }
+.links a { color: var(--accent); text-decoration: none; font-weight: 500; }
+.links a:hover { text-decoration: underline; }
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-top: 40px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+h2 { margin: 0; font-size: 22px; }
+
+.tag { margin: 2px 0 12px; color: var(--muted); font-size: 14px; }
+
+article p { margin: 0 0 12px; }
+
+ul { margin: 0 0 20px; padding-left: 18px; color: var(--muted); font-size: 14px; }
+
+.actions { display: flex; gap: 8px; margin-top: auto; }
+
+.btn {
+  padding: 8px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+.btn.ghost { background: transparent; color: var(--accent); }
+.btn:hover { opacity: .9; }
+
+footer { margin-top: 40px; color: var(--muted); font-size: 13px; }
+footer p { margin: 0; }
+
+@media (max-width: 480px) {
+  main { padding-top: 32px; }
+  h1 { font-size: 32px; }
+}

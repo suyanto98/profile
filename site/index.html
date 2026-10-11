@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suyanto · Backend Engineer</title>
+<meta name="description" content="Suyanto — backend engineer (Go, PostgreSQL). Dua project yang bisa dicoba langsung: LedgerPay dan PayRun.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b2559'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">suyantolabs</p>
+    <h1>Suyanto</h1>
+    <p class="role">Backend Engineer · Go · PostgreSQL</p>
+    <p class="lead">
+      Saya membangun sistem backend yang datanya harus tetap benar walaupun request dobel,
+      datang bersamaan, atau server mati di tengah proses. Dua project di bawah bisa langsung
+      dicoba di browser — klik "Coba demo", tanpa daftar.
+    </p>
+    <nav class="links">
+      <a href="mailto:suyantolearn09@gmail.com">suyantolearn09@gmail.com</a>
+      <a href="https://github.com/__GITHUB__" data-github>GitHub</a>
+    </nav>
+  </header>
+
+  <section class="projects">
+    <article>
+      <h2>LedgerPay</h2>
+      <p class="tag">Dompet digital &amp; mini payment platform</p>
+      <p>
+        Ledger double-entry yang selalu seimbang. Transfer aman dari klik ganda (idempotency),
+        100 transfer paralel tidak bisa membuat saldo minus, dan pembayaran yang hasilnya
+        tidak pasti diselesaikan lewat rekonsiliasi.
+      </p>
+      <ul>
+        <li>Go, PostgreSQL, job queue berbasis Postgres</li>
+        <li>Prometheus, Grafana, OpenTelemetry</li>
+        <li>Vue 3, Docker Compose, Caddy</li>
+      </ul>
+      <div class="actions">
+        <a class="btn" href="https://ledgerpay.suyantolabs.my.id">Coba demo</a>
+        <a class="btn ghost" href="https://github.com/__GITHUB__/ledgerpay" data-github>Kode</a>
+      </div>
+    </article>
+
+    <article>
+      <h2>PayRun</h2>
+      <p class="tag">SaaS payroll multi-tenant</p>
+      <p>
+        Banyak perusahaan dalam satu database, dan tidak ada satu pun yang bisa melihat data
+        perusahaan lain (Row-Level Security). Payroll dihitung bertahap, tetap selesai benar
+        walaupun worker crash di tengah jalan, lalu dikunci setelah final.
+      </p>
+      <ul>
+        <li>Go, PostgreSQL RLS, enkripsi data pribadi</li>
+        <li>Payroll engine deterministik, slip gaji PDF</li>
+        <li>Vue 3, S3-compatible storage, Docker Compose</li>
+      </ul>
+      <div class="actions">
+        <a class="btn" href="https://payrun.suyantolabs.my.id">Coba demo</a>
+        <a class="btn ghost" href="https://github.com/__GITHUB__/payrun" data-github>Kode</a>
+      </div>
+    </article>
+  </section>
+
+  <footer>
+    <p>Kedua aplikasi berjalan di satu VPS 2 vCPU / 4 GB. Data demo dibuat terpisah untuk setiap pengunjung dan kedaluwarsa otomatis setelah 24 jam.</p>
+  </footer>
+</main>
+</body>
+</html>
