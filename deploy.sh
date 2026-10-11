@@ -6,7 +6,6 @@ HOST=${1:?usage: deploy.sh <host>}
 USER_AT=${DEPLOY_USER:-deploy}@${HOST}
 EDGE=${EDGE_CONTAINER:-ledgerpay-prod-edge-1}
 cd "$(dirname "$0")"
-grep -q '__GITHUB__' site/index.html && echo "note: GitHub username belum diisi di site/index.html"
 tar -c site profile.caddy | ssh -o BatchMode=yes "$USER_AT" "set -e
   rm -rf /tmp/profile-upload && mkdir -p /tmp/profile-upload && tar -x -C /tmp/profile-upload
   rm -rf /srv/edge/sites/profile.new && mv /tmp/profile-upload/site /srv/edge/sites/profile.new
