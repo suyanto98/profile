@@ -77,7 +77,7 @@ article p { margin: 0 0 12px; }
 
 ul { margin: 0 0 20px; padding-left: 18px; color: var(--muted); font-size: 14px; }
 
-.actions { display: flex; gap: 8px; margin-top: auto; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
 
 .btn {
   padding: 8px 16px;
